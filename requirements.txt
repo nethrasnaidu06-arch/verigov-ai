@@ -8,3 +8,4 @@ uvicorn[standard]>=0.29
 pydantic>=2.6
 pytest>=8.0
 matplotlib>=3.8
+sqlalchemy>=2.0
