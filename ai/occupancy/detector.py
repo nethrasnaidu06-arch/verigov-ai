@@ -11,8 +11,8 @@ class Observation:
     confidence: float
 
 
-def run_video(video_path: str, sample_every_s: float = 5.0, model_name: str = "yolov8n.pt",
-              conf: float = 0.4, start_time: datetime | None = None) -> list[dict]:
+def run_video(video_path: str, sample_every_s: float = 5.0, model_name: str = "yolov8m.pt",
+                 conf: float = 0.3, start_time: datetime | None = None) -> list[dict]:
     import cv2
     from ultralytics import YOLO
 
@@ -54,6 +54,6 @@ def classify_activity(motion_ratio: float, people: int) -> str:
         return "Low activity"
     if motion_ratio < 0.005:
         return "Low activity"
-    if motion_ratio > 0.25:
+    if motion_ratio > 0.6:
         return "Unusual activity"
     return "Normal activity"
