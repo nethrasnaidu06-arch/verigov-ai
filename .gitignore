@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+*.pt
+*.mp4
+datasets/*
+!datasets/README.md
+node_modules/
+build/
+.idea/
+.vscode/
